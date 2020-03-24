@@ -26,14 +26,49 @@ body {
 }
 
 #time {
-  font-size: 4em;
+  font-size: 5em;
   text-align: center;
   margin: 0;
 }
 
 #todolist {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  background-color: rgba(247, 245, 245, 0.8);
-  color: black;
+  align-content: center;
+  background-color: rgba(29, 28, 28, 0.8);
+  color: white;
+  width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  outline: none;
+}
+
+.done + .todo {
+  text-decoration: line-through;
+  color: grey;
+}
+
+input[type="checkbox"] {
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  transform: scale(1.5);
 }
