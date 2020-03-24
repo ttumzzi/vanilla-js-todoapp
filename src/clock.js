@@ -1,10 +1,17 @@
 const time = document.querySelector("#time");
 
+function getRevisedTime(time) {
+  const result = time < 10 ? `0${time}` : `${time}`;
+  console.log(result);
+  return result;
+}
+
 function setTime() {
   const curTime = new Date();
-  const hour = curTime.getHours();
+  const hour24 = curTime.getHours();
+  const hour = hour24 > 12 ? hour24 - 12 : hour24;
   const minute = curTime.getMinutes();
-  time.innerText = `${hour > 12 ? hour - 12 : hour}:${minute}`;
+  time.innerText = `${getRevisedTime(hour)} : ${getRevisedTime(minute)}`;
 }
 
 function displayClock() {
