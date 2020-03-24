@@ -2,7 +2,6 @@ const time = document.querySelector("#time");
 
 function getRevisedTime(time) {
   const result = time < 10 ? `0${time}` : `${time}`;
-  console.log(result);
   return result;
 }
 
