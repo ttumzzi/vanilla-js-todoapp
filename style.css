@@ -1,0 +1,39 @@
+body {
+  /* background-image: linear-gradient(to right, #0093e9 0%, #80d0c7 100%); */
+  background-image: url("./src/background.jpg");
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#greet {
+  display: flex;
+  justify-content: center;
+}
+
+#greet > * {
+  margin: 10px;
+  font-size: 4em;
+}
+
+#username {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#username:hover {
+  transform: scale(1.01);
+  color: black;
+}
+
+#time {
+  font-size: 4em;
+  text-align: center;
+  margin: 0;
+}
+
+#todolist {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(247, 245, 245, 0.8);
+  color: black;
+}
