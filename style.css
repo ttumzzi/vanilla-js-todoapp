@@ -1,18 +1,33 @@
 body {
-  /* background-image: linear-gradient(to right, #0093e9 0%, #80d0c7 100%); */
-  background-image: url("./src/background.jpg");
-  color: white;
-  font-family: "Source Sans Pro", sans-serif;
+  background-image: linear-gradient(to right, #0093e9 0%, #4d2275 100%);
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+}
+
+#root {
+  font-family: "Noto Serif", serif;
+  width: 40%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+  #root {
+    width: 80%;
+  }
 }
 
 #greet {
   display: flex;
   justify-content: center;
+  color: white;
+  margin-top: 2rem;
 }
 
 #greet > * {
   margin: 10px;
-  font-size: 4em;
 }
 
 #username {
@@ -26,9 +41,11 @@ body {
 }
 
 #time {
-  font-size: 5em;
   text-align: center;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 3.5em;
+  color: white;
 }
 
 #todolist {
@@ -36,27 +53,30 @@ body {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background-color: rgba(29, 28, 28, 0.8);
   color: white;
-  width: 500px;
+  /* width: 500px; */
   margin: 0 auto;
+}
+
+#todolist > * {
+  margin: 1px;
   padding: 10px;
-  font-size: 1.2em;
+  border-radius: 10px;
 }
 
 .todo-item {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  background-color: rgba(41, 40, 40, 0.8);
 }
 
 input {
   background-color: transparent;
   border: none;
   text-align: center;
-  color: white;
-  font-size: 1.2em;
+  color: rgb(253, 253, 253);
   outline: none;
+  background-color: rgba(144, 135, 135, 0.8);
 }
 
 .done + .todo {
@@ -71,4 +91,14 @@ input[type="checkbox"] {
   -webkit-transform: scale(1.5); /* Safari and Chrome */
   -o-transform: scale(1.5); /* Opera */
   transform: scale(1.5);
+}
+
+.setting-btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: grey !important;
 }

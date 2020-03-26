@@ -2,7 +2,6 @@ const greet = document.querySelector("#greet");
 const greetMssage = document.querySelector("#greetMssage");
 const username = document.querySelector("#username");
 const lsID = "tlusername";
-console.log(greet, greetMssage, username);
 
 function getGreetingWord() {
   const time = new Date();
@@ -16,7 +15,7 @@ function getGreetingWord() {
 function getUsername() {
   const username = localStorage.getItem(lsID);
   if (!username) return "there";
-  return username + " :)";
+  return username;
 }
 
 function setUsername() {
