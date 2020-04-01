@@ -19,7 +19,6 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
     "bootstrap": "^4.4.1",
-    "foundation-sites": "^6.6.1",
-    "shortid": "^2.2.15"
+    "foundation-sites": "^6.6.1"
   }
 }

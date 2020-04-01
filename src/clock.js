@@ -10,7 +10,7 @@ function setTime() {
   const hour24 = curTime.getHours();
   const hour = hour24 > 12 ? hour24 - 12 : hour24;
   const minute = curTime.getMinutes();
-  time.innerText = `${getRevisedTime(hour)} : ${getRevisedTime(minute)}`;
+  time.innerText = `${getRevisedTime(hour)}:${getRevisedTime(minute)}`;
 }
 
 function displayClock() {

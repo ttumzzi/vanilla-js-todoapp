@@ -1,5 +1,13 @@
+html,
 body {
-  background-image: linear-gradient(to right, #0093e9 0%, #4d2275 100%);
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  /* background-image: linear-gradient(to right, #0093e9 0%, #4d2275 100%); */
+  background-image: url(./background.jpg);
+  background-size: cover;
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer */
   -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
@@ -8,9 +16,10 @@ body {
 }
 
 #root {
-  font-family: "Noto Serif", serif;
   width: 40%;
   margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 @media screen and (max-width: 800px) {
@@ -19,11 +28,16 @@ body {
   }
 }
 
+h1 {
+  font-family: "Roboto Mono", monospace;
+  color: white;
+}
+
 #greet {
   display: flex;
   justify-content: center;
-  color: white;
-  margin-top: 2rem;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
 #greet > * {
@@ -44,8 +58,6 @@ body {
   text-align: center;
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 3.5em;
-  color: white;
 }
 
 #todolist {
@@ -54,7 +66,6 @@ body {
   justify-content: center;
   align-content: center;
   color: white;
-  /* width: 500px; */
   margin: 0 auto;
 }
 
@@ -67,11 +78,11 @@ body {
 .todo-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: rgba(41, 40, 40, 0.8);
 }
 
 input {
-  background-color: transparent;
   border: none;
   text-align: center;
   color: rgb(253, 253, 253);
@@ -97,8 +108,74 @@ input[type="checkbox"] {
   background-color: transparent;
   border: none;
   color: white;
+  border-radius: 20px;
 }
+
+.setting-btn:hover {
+  background-color: grey;
+}
+
 .dropdown-item.active,
 .dropdown-item:active {
   background-color: grey !important;
+}
+
+button:focus {
+  outline: 0 !important;
+}
+
+/* signup */
+
+.sign-format {
+  text-align: center;
+  display: flex;
+  height: 90%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-data {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+label {
+  margin: 10px;
+  color: rgb(56, 55, 55, 0.7);
+  font-weight: bold;
+  font-family: "Roboto Mono", monospace;
+}
+
+.form-data > input {
+  background-color: transparent;
+  color: black;
+  border-bottom: 0.5px solid rgb(56, 55, 55, 0.7);
+}
+
+.submit-btn {
+  margin-top: 30px;
+  background-color: rgb(56, 55, 55);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+  padding: 10px;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: rgb(78, 77, 77);
+  cursor: pointer;
+}
+
+a {
+  color: white;
 }
