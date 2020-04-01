@@ -98,11 +98,14 @@ function handleRemoveTodo(id) {
 function createSettingDropdown(id) {
   const setting = createDivElem(["setting", "dropdown"]);
   const settingButton = document.createElement("button");
+  const settingBtnImage = document.createElement("img");
   const dropdown = createDivElem(["dropdown-menu", "dropdown-menu-right"]);
   const edit = createDivElem(["dropdown-item"]);
   const remove = createDivElem(["dropdown-item"]);
 
-  settingButton.classList.add(...["setting-btn", "fas", "fa-ellipsis-v"]);
+  settingBtnImage.setAttribute("src", "../src/ic_menu.png");
+  settingButton.appendChild(settingBtnImage);
+  settingButton.classList.add(...["setting-btn"]);
   settingButton.setAttribute("data-toggle", "dropdown");
   settingButton.setAttribute("aria-haspopup", "true");
   settingButton.setAttribute("aria-expanded", "false");
