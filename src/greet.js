@@ -15,7 +15,7 @@ async function getUsernameFromtLS() {
     return;
   }
   let username = "";
-  await fetch(`http://localhost:3000/greet?uid=${uid}`)
+  await fetch(`https://rhubarb-cupcake-67582.herokuapp.com/greet?uid=${uid}`)
     .then(res => res.json())
     .then(data => {
       username = data;

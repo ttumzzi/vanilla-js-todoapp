@@ -22,7 +22,7 @@ function saveLocalStorage(newData) {
 function sendPostRequest(item) {
   if (!getLSkey().lsTodo) return;
   const { method, target, obj } = item;
-  const url = `http://localhost:3000/${target}`;
+  const url = `https://rhubarb-cupcake-67582.herokuapp.com/${target}`;
   fetch(url, {
     method,
     headers: { "Content-Type": "application/json" },

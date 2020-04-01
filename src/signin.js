@@ -23,7 +23,7 @@ const saveToLocalstorage = data => {
 
 submit.addEventListener("click", () => {
   if (!email.value || !validateEmail(email.value) || !password.value) return;
-  fetch("http://localhost:3000/signin", {
+  fetch("https://rhubarb-cupcake-67582.herokuapp.com/signin", {
     method: "post",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
