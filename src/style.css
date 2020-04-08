@@ -6,7 +6,7 @@ body {
 
 body {
   /* background-image: linear-gradient(to right, #0093e9 0%, #4d2275 100%); */
-  background-image: url(./background.jpg);
+  background-image: url(./background.webp);
   background-size: cover;
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer */
