@@ -15,9 +15,8 @@ function saveLocalStorage(newData) {
   localStorage.setItem(getLSkey().lsTodo, JSON.stringify(newData));
 }
 
-function sendPostRequest(item) {
+function sendPostRequest({ method, target, obj }) {
   if (!getLSkey().lsTodo) return;
-  const { method, target, obj } = item;
   const url = `https://rhubarb-cupcake-67582.herokuapp.com/${target}`;
   fetch(url, {
     method,
@@ -136,8 +135,7 @@ function generateID() {
 }
 
 // make elements
-function addTodo(item) {
-  const { id, todo, check } = item;
+function addTodo({ id, todo, check }) {
   const newElem = createElem({ tag: "div", classList: ["todo-item"] });
   newElem.setAttribute("id", id);
   todolist.appendChild(newElem);

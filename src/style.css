@@ -108,7 +108,7 @@ input[type="checkbox"] {
 .setting-btn {
   background-color: transparent;
   border: none;
-  border-radius: 20px;
+  clip-path: circle();
 }
 
 .setting-btn:hover {
@@ -157,7 +157,9 @@ label {
 .form-data > input {
   background-color: transparent;
   color: black;
-  border-bottom: 0.5px solid rgb(56, 55, 55, 0.7);
+  border: 0.5px solid rgba(114, 112, 112, 0.7);
+  height: 20px;
+  border-radius: 10px;
 }
 
 .submit-btn {
